@@ -1,0 +1,55 @@
+name: Build and Deploy to Development
+on:
+  push:
+    branches: 
+      - development
+concurrency: Development-Environment
+jobs:
+  frontend_deploy:
+    name: Development-Deploy
+    #timeout-minutes: <time in minutes after which the job should timeout>
+    permissions:
+      id-token: write
+      contents: read
+    runs-on: ubuntu-latest
+    env:
+      VITE_APP_ENVIRONMENT: "development"
+      VITE_APP_BACKEND_URL: 'https://dev.api.portal.safetrafikskola.se'
+
+    steps:
+      - name: Create ENV
+        run: echo -e "VITE_APP_ENVIRONMENT=$VITE_APP_ENVIRONMENT\n VITE_APP_BACKEND_URL=$VITE_APP_BACKEND_URL" > .env
+      - name: Checkout the code
+        uses: actions/checkout@v2
+        with: 
+          fetch-depth: 0
+      - name: Install node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Cache the dependencies
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: yarn install
+        run: yarn --prefer-offline
+      - name: Build
+        run: yarn build
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.AWS_OIDC_ROLE_DEV_ARN }}
+          role-session-name: GitHub-Action-Role
+          aws-region: ${{ secrets.AWS_DEV_REGION }}
+      - name: Deploy
+        run: |
+          aws s3 cp ./build/ s3://${{ secrets.S3_DEV_BUCKET }} --cache-control 'public, max-age=31104000' --recursive
+          aws configure set preview.cloudfront true
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CDN_DEV_DISTRIBUTION_ID }} --paths "/*"
