@@ -1,20 +1,16 @@
 import React, { useContext } from 'react';
 import { LoginContent, LoginWrapper } from '../../../components/styled';
-
-import BrandLogo from '../../../components/brand/brandLogo';
-import { Typography } from 'antd';
 import { useTranslation } from 'react-i18next';
-import Response from '../../../components/response/response';
-import { SubmitButton } from '../../../components/button/customButton';
 import { useNavigate } from 'react-router';
+import BrandLogo from '../../../components/brand/brandLogo';
+import { SubmitButton } from '../../../components/button/customButton';
+import Response from '../../../components/response/response';
 import { appUrls } from '../../../utils/constraints/appUrls';
-
 import ResetPasswordContext, {
   dispatchType,
 } from '../../../context/resetPasswordContext';
 
 const Success = () => {
-  const { Title, Text } = Typography;
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { dispatch } = useContext(ResetPasswordContext);

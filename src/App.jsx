@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react';
-import RoutesCollection from './routes/router';
-import { ConfigProvider } from 'antd';
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { Toaster } from 'react-hot-toast';
-import { antTheme } from './theme/antTheme';
 import { ThemeProvider } from '@emotion/react';
-import { GlobalStyle } from './style/globalStyle';
-import { customTheme } from './theme/customTheme';
-import './language/i18n';
+import { ConfigProvider } from 'antd';
+import React, { useEffect } from 'react';
+import { Toaster } from 'react-hot-toast';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import DevDrawer from './features/test/devDrawer';
+import './language/i18n';
+import RoutesCollection from './routes/router';
 import { languageStore } from './store/language';
 import { getStorage } from './store/storage/storage';
+import { GlobalStyle } from './style/globalStyle';
+import { antTheme } from './theme/antTheme';
+import { customTheme } from './theme/customTheme';
 
 function App() {
   const { setLanguage } = languageStore(state => state.setLanguage);

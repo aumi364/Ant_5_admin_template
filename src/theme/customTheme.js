@@ -11,9 +11,9 @@ const gray = {
   100: '#ABBAC7',
 };
 const color = {
-  primary: '#D9881C',
-  primaryLight: '#e6a443',
-  primaryDark: '#e8900f',
+  primary: '#0891B2',
+  primaryLight: '#1C6758',
+  primaryDark: '#1C6758',
   white: '#FFFFFF',
   warning: '#FF5C00',
   error: '#FC0000',
