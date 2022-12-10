@@ -3,10 +3,10 @@ import CustomPaper from '../../components/paper/CustomPaper';
 import { Table, Typography } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { StyledTableWrapper } from '../../components/styled';
-import generateStudentsTableColumn from '../../features/table/generateStudentsTableColumn';
-import { studentData } from './dummydata';
+import generateStudentsTableColumn from '../../features/table/generateUsersTableColumn';
+import { usersData } from './dummydata';
 
-const Students = () => {
+const Users = () => {
   const { t } = useTranslation();
   const columns = generateStudentsTableColumn();
   return (
@@ -16,13 +16,13 @@ const Students = () => {
       </CustomPaper.Head>
       <CustomPaper.Body>
         <StyledTableWrapper>
-          <Table columns={columns} dataSource={studentData} />
+          <Table columns={columns} dataSource={usersData} />
         </StyledTableWrapper>
       </CustomPaper.Body>
     </CustomPaper>
   );
 };
 
-Students.propTypes = {};
+Users.propTypes = {};
 
-export default Students;
+export default Users;

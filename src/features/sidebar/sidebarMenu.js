@@ -2,13 +2,7 @@ import React, { useState } from 'react';
 import Icon from '../../components/Icon/Icon';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import {
-  HomeOutlined,
-  MessageOutlined,
-  SolutionOutlined,
-  TeamOutlined,
-  ToolOutlined,
-} from '@ant-design/icons';
+import { HomeOutlined, TeamOutlined } from '@ant-design/icons';
 import { NavigationMenu } from '../../components/styled';
 
 const SideBarMenu = () => {
@@ -27,23 +21,8 @@ const SideBarMenu = () => {
       label: <NavLink to={'/dashboard'}>{t('Overview')}</NavLink>,
     },
     {
-      key: 'students',
-      icon: <Icon inherit component={TeamOutlined} />,
-      label: <NavLink to={'students'}>{t('Students')}</NavLink>,
-    },
-    {
-      key: 'chat',
-      icon: <Icon inherit component={MessageOutlined} />,
-      label: <NavLink to={'chat'}>{t('Chat')}</NavLink>,
-    },
-    {
-      key: 'leads',
-      icon: <Icon inherit component={SolutionOutlined} />,
-      label: <NavLink to={'leads'}>{t('Leads')}</NavLink>,
-    },
-    {
       key: 'users',
-      icon: <Icon inherit component={ToolOutlined} />,
+      icon: <Icon inherit component={TeamOutlined} />,
       label: <NavLink to={'users'}>{t('Users')}</NavLink>,
     },
   ];

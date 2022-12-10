@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 const GenerateMeetingsColumn = () => {
   return [
@@ -7,47 +6,22 @@ const GenerateMeetingsColumn = () => {
       title: 'Student name',
       dataIndex: '',
       key: 'name',
-      render: ({ first_name, last_name, uuid } = {}) => {
-        return (
-          <NavLink className="hyper-link" to={`/dashboard/students/${uuid}`}>
-            {`${first_name ?? ''} ${last_name ?? ''}`}
-          </NavLink>
-        );
+      render: ({ first_name, last_name } = {}) => {
+        return `${first_name ?? ''} ${last_name ?? ''}`;
       },
       responsive: ['sm'],
     },
     {
-      title: 'Municipality',
-      dataIndex: 'municipality',
-      key: 'municipality',
+      title: 'Email',
+      dataIndex: 'email',
+      key: 'email',
       responsive: ['sm'],
     },
     {
-      title: 'Assigned traffic school',
-      dataIndex: 'assigned_traffic_school',
-      key: 'assigned_traffic_school',
+      title: 'Phone',
+      dataIndex: 'phone_number',
+      key: 'phone',
       responsive: ['sm'],
-      render: ({ name } = {}) => {
-        return name;
-      },
-    },
-    {
-      title: 'Assigned teacher',
-      dataIndex: 'assigned_teacher',
-      key: 'assigned_teacher',
-      responsive: ['sm'],
-      render: ({ name } = {}) => {
-        return name;
-      },
-    },
-    {
-      title: 'Assigned mentor',
-      dataIndex: 'assigned_mentor',
-      key: 'assigned_mentor',
-      responsive: ['sm'],
-      render: ({ name } = {}) => {
-        return name;
-      },
     },
 
     // {

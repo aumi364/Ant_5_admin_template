@@ -7,7 +7,7 @@ import {
 import CustomPaper from '../../../components/paper/CustomPaper';
 import Header from './Header';
 
-const StudentDetails = () => {
+const UserDetails = () => {
   const infos = [
     { value: '+8801789339847', icon: PhoneOutlined },
     { value: 'Uppsala', icon: PushpinOutlined },
@@ -20,6 +20,6 @@ const StudentDetails = () => {
   );
 };
 
-StudentDetails.propTypes = {};
+UserDetails.propTypes = {};
 
-export default StudentDetails;
+export default UserDetails;

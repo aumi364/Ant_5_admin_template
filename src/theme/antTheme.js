@@ -7,7 +7,7 @@ export const antTheme = {
     colorLink: customTheme.color.primary,
     colorLinkHover: customTheme.color.primaryLight,
     colorLinkActive: customTheme.color.primaryDark,
-    borderRadius: '12px',
+    borderRadius: '24px',
     colorText: customTheme.textColor.primary,
     fontSizeHeading1: customTheme.textSize.h1,
     fontSizeHeading2: customTheme.textSize.h2,

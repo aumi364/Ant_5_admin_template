@@ -11,18 +11,13 @@ const resources = {
       resetPasswordInstruction: 'Create a new password for your account.',
     },
   },
-  sv: {
+  bn: {
     translation: {
       otpRequestInstruction:
         'Enter the email on your account and we will sent you a password reset link.',
       otpVerifyMessage:
         'Vi har skickat en 6-siffrig verifieringskod till dig via sms.',
       resetPasswordInstruction: 'Create a new password for your account.',
-      Overview: 'Översikt',
-      Students: 'Studenter',
-      Chat: 'Chatt',
-      Leads: 'Leder',
-      Users: 'Användare',
     },
   },
 };
@@ -31,7 +26,7 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
-    lng: language ?? 'sv',
+    lng: language ?? 'bn',
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false, // react already safes from xss

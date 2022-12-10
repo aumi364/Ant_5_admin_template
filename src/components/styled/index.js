@@ -66,7 +66,7 @@ export const DashboardContainer = styled.div(({ theme }) => ({
 }));
 
 export const StyledTableWrapper = styled.div(({ theme }) => ({
-  borderRadius: '12px',
+  borderRadius: '24px',
   '.styledTableFilterSection': {
     display: 'flex',
     flexWrap: 'wrap',

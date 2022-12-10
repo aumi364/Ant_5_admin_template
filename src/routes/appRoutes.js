@@ -50,15 +50,13 @@ export const privateRoutes = {
       component: lazy(() => import('../pages/overview/overview')),
     },
     {
-      path: appUrls.students,
-      component: lazy(() => import('../pages/students/students')),
+      path: appUrls.users,
+      component: lazy(() => import('../pages/users/users')),
     },
-    {
-      path: appUrls.studentsDetails,
-      component: lazy(() =>
-        import('../pages/students/studentDetails/studentDetails'),
-      ),
-    },
+    // {
+    //   path: appUrls.userDetails,
+    //   component: lazy(() => import('../pages/users/userDetails/userDetails')),
+    // },
     // ----------- meetings start ----------
 
     // ----------- Settings end ----------

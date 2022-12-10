@@ -4,7 +4,7 @@ export const appUrls = {
   dashboard: 'dashboard',
   notFound: 'not-found',
   users: 'users',
-  user: 'users/:id',
+  userDetails: 'users/:id',
   resetPassword: 'reset-password',
   requestOtp: 'request-otp',
   verifyOtp: 'verify-otp',
