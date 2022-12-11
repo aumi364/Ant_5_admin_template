@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react';
 import React from 'react';
 import { Layout } from 'antd';
 import Sidebar from '../features/sidebar/sidebar';
@@ -8,6 +9,7 @@ import { DashboardContainer } from '../components/styled';
 const { Content, Footer } = Layout;
 
 export default function Dashboard() {
+  const theme = useTheme();
   return (
     <DashboardContainer>
       <Layout>
