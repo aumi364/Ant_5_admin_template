@@ -11,4 +11,5 @@ export const appUrls = {
   students: 'students',
   studentsDetails: 'students/:id',
   items: 'items',
+  order: 'order',
 };

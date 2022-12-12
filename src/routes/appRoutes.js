@@ -57,6 +57,10 @@ export const privateRoutes = {
       path: appUrls.items,
       component: lazy(() => import('../pages/items/items')),
     },
+    {
+      path: appUrls.order,
+      component: lazy(() => import('../pages/order/order')),
+    },
     // {
     //   path: appUrls.userDetails,
     //   component: lazy(() => import('../pages/users/userDetails/userDetails')),

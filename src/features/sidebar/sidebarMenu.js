@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import Icon from '../../components/Icon/Icon';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { HomeOutlined, MenuOutlined, TeamOutlined } from '@ant-design/icons';
+import {
+  AntDesignOutlined,
+  HomeOutlined,
+  MenuOutlined,
+  TeamOutlined,
+} from '@ant-design/icons';
 import { NavigationMenu } from '../../components/styled';
 
 const SideBarMenu = () => {
@@ -29,6 +34,11 @@ const SideBarMenu = () => {
       key: 'items',
       icon: <Icon inherit component={MenuOutlined} />,
       label: <NavLink to={'items'}>{t('Items')}</NavLink>,
+    },
+    {
+      key: 'order',
+      icon: <Icon inherit component={AntDesignOutlined} />,
+      label: <NavLink to={'order'}>{t('Order')}</NavLink>,
     },
   ];
 

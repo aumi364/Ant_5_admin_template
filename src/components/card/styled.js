@@ -35,7 +35,7 @@ export const StyledMenuItemCard = styled.div(({ theme }) => ({
   minHeight: '250px',
   cursor: 'pointer',
   '.menuitem-price-tag': {
-    background: theme.color.secondary,
+    background: theme.color.primaryLight,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

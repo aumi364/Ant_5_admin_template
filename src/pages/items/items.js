@@ -1,11 +1,12 @@
 import React from 'react';
-import MenuItemCard from '../../components/card/menuItemCard';
+import MenuItemCard from '../order/items/menuItemCard';
+import { List } from 'antd';
 
 const Items = props => {
   return (
-    <div>
+    <List>
       <MenuItemCard />
-    </div>
+    </List>
   );
 };
 
