@@ -12,7 +12,7 @@ const Users = () => {
   return (
     <CustomPaper>
       <CustomPaper.Head>
-        <Typography.Title>{t('Students')}</Typography.Title>
+        <Typography.Title>{t('Users')}</Typography.Title>
       </CustomPaper.Head>
       <CustomPaper.Body>
         <StyledTableWrapper>

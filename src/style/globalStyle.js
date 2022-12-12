@@ -143,6 +143,9 @@ export const GlobalStyle = () => {
         .ant-typography-secondary {
           color: ${theme.gray[300]} !important;
         }
+        .ant-btn {
+          box-shadow: none;
+        }
       `}
     />
   );

@@ -26,6 +26,26 @@ export const StyledCard = styled.div({
   borderRadius: '4px',
   border: '1px solid #e2e8f0',
 });
+export const StyledMenuItemCard = styled.div(({ theme }) => ({
+  background: 'white',
+  padding: '1rem',
+  borderRadius: '12px',
+  border: '1px solid #e2e8f0',
+  maxWidth: '250px',
+  minHeight: '250px',
+  cursor: 'pointer',
+  '.menuitem-price-tag': {
+    background: theme.color.secondary,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: theme.color.primary,
+    borderRadius: '12px',
+    fontSize: '22px',
+    fontWeight: '500',
+    padding: '24px 12px',
+  },
+}));
 
 export const CardHeader = styled.div({
   display: 'flex',

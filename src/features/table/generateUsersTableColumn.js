@@ -3,7 +3,7 @@ import React from 'react';
 const GenerateMeetingsColumn = () => {
   return [
     {
-      title: 'Student name',
+      title: 'Name',
       dataIndex: '',
       key: 'name',
       render: ({ first_name, last_name } = {}) => {

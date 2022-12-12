@@ -10,4 +10,5 @@ export const appUrls = {
   verifyOtp: 'verify-otp',
   students: 'students',
   studentsDetails: 'students/:id',
+  items: 'items',
 };

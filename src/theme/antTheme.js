@@ -7,7 +7,7 @@ export const antTheme = {
     colorLink: customTheme.color.primary,
     colorLinkHover: customTheme.color.primaryLight,
     colorLinkActive: customTheme.color.primaryDark,
-    borderRadius: '24px',
+    borderRadius: '12px',
     colorText: customTheme.textColor.primary,
     fontSizeHeading1: customTheme.textSize.h1,
     fontSizeHeading2: customTheme.textSize.h2,
@@ -20,9 +20,11 @@ export const antTheme = {
   components: {
     Button: {
       controlHeightLG: customTheme.size.xlg,
+      borderRadiusLG: '24px',
     },
     Input: {
       controlHeightLG: customTheme.size.xlg,
+      borderRadiusLG: '24px',
     },
     Menu: {
       controlHeightLG: customTheme.size.lg,

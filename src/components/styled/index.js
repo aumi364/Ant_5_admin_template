@@ -66,7 +66,7 @@ export const DashboardContainer = styled.div(({ theme }) => ({
 }));
 
 export const StyledTableWrapper = styled.div(({ theme }) => ({
-  borderRadius: '24px',
+  borderRadius: '12px',
   '.styledTableFilterSection': {
     display: 'flex',
     flexWrap: 'wrap',
@@ -149,6 +149,7 @@ export const NavigationMenu = styled(Menu)(({ theme }) => ({
   },
   '.ant-menu-item.ant-menu-item-selected': {
     color: theme.color.white,
+
     backgroundColor: theme.color.primary,
   },
 }));
