@@ -1,10 +1,10 @@
 <h1 align="center">
   <br>
-    trafikskola
+    Ant deisgn 5 template
   <br>
 </h1>
 
-<h4 align="center">An application for users of tafikskola.</h4>
+<h4 align="center">React admin panel with Ant design 5.</h4>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
