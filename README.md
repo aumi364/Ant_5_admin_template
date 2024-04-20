@@ -58,7 +58,7 @@ $ git clone repo-link
 $ git clone repo-link
 
 # Go into the repository
-$ cd safe-trafikskola-frontend
+$ cd Ant_5_admin_template
 
 # Install dependencies
 $ yarn install or npm i
